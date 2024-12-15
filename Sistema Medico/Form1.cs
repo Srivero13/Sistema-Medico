@@ -21,11 +21,6 @@ namespace Sistema_Medico
         {
             InitializeComponent();
             this.Text = "Sistema medico";
-            this.FormBorderStyle = FormBorderStyle.Sizable;
-            this.MaximizeBox = true;
-            this.MinimizeBox = true;
-            this.ControlBox = true;
-            this.ShowIcon = true;
             materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;

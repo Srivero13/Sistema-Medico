@@ -40,7 +40,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.Location = new System.Drawing.Point(55, 212);
+            this.button1.Location = new System.Drawing.Point(72, 207);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(195, 62);
             this.button1.TabIndex = 0;
@@ -50,7 +50,7 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.Location = new System.Drawing.Point(55, 337);
+            this.button2.Location = new System.Drawing.Point(72, 339);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(195, 62);
             this.button2.TabIndex = 1;
@@ -63,17 +63,16 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(0, 63);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(314, 594);
+            this.panel1.Size = new System.Drawing.Size(344, 531);
             this.panel1.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(24, 77);
+            this.label1.Location = new System.Drawing.Point(43, 78);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(255, 56);
             this.label1.TabIndex = 2;
@@ -82,9 +81,9 @@
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = global::Sistema_Medico.Properties.Resources._188819729_multiracial_team_of_professional_medical_surgeons_performs_the_surgical_operation_in_hospital;
-            this.pictureBox1.Location = new System.Drawing.Point(311, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(344, 63);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(477, 594);
+            this.pictureBox1.Size = new System.Drawing.Size(444, 531);
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
