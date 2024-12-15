@@ -33,5 +33,12 @@ namespace Sistema_Medico
             );
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form2 form = new Form2();
+            this.Hide();
+            form.FormClosed += (s, args) => this.Close();
+            form.Show();
+        }
     }
 }
