@@ -8,16 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MaterialSkin;
+using System.IO;
 using MaterialSkin.Controls;
-
-
 
 namespace Sistema_Medico
 {
-    public partial class Form1 : MaterialForm
+    public partial class Form4 : MaterialForm
     {
         private readonly MaterialSkinManager materialSkinManager;
-        public Form1()
+        private string correoPaciente;
+        public Form4(string correoPaciente)
         {
             InitializeComponent();
             this.Text = "Sistema medico";
@@ -31,22 +31,35 @@ namespace Sistema_Medico
                 Accent.Orange700,
                 TextShade.WHITE
             );
+            this.correoPaciente=correoPaciente;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Form4_Load(object sender, EventArgs e)
         {
-            Form2 form = new Form2();
-            this.Hide();
-            form.FormClosed += (s, args) => this.Close();
-            form.Show();
+            CargarDatosPorCorreo(correoPaciente);
+        }
+        private void CargarDatosPorCorreo(string correo)
+        {
+            string ruta = "registros.txt";
+
+            if (!File.Exists(ruta))
+            {
+                MessageBox.Show("El archivo de registros no existe.");
+                return;
+            }
+
+            foreach (string linea in File.ReadLines(ruta))
+            {
+                if (linea.Contains($"Correo: {correo}"))
+                {
+                    listBox1.Items.Add(linea);
+                    return;
+                }
+            }
+
+            MessageBox.Show("No se encontraron datos para el correo ingresado.");
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Form3 form = new Form3();
-            this.Hide();
-            form.FormClosed += (s, args) => this.Close();
-            form.Show();
-        }
+
     }
 }
