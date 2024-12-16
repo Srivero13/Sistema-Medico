@@ -121,4 +121,10 @@
   <data name="188819729-multiracial-team-of-professional-medical-surgeons-performs-the-surgical-operation-in-hospital" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\188819729-multiracial-team-of-professional-medical-surgeons-performs-the-surgical-operation-in-hospital.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="home_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\home_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Commons_QR_code" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Commons_QR_code.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

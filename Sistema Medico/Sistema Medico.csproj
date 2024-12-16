@@ -123,5 +123,11 @@
   <ItemGroup>
     <None Include="Resources\188819729-multiracial-team-of-professional-medical-surgeons-performs-the-surgical-operation-in-hospital.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Commons_QR_code.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

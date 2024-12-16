@@ -19,6 +19,7 @@ namespace Sistema_Medico
         private string correoPaciente;
         private string archivoCitas = "citas.txt";
         private Dictionary<string, int> contadorEspecialidades = new Dictionary<string, int>();
+        private Dictionary<string, int> preciosEspecialidades = new Dictionary<string, int>();
         private const int limiteCitas = 10;
         public Form4(string correoPaciente)
         {
@@ -36,6 +37,7 @@ namespace Sistema_Medico
                 TextShade.WHITE
             );
             InicializarContadorEspecialidades();
+            InicializarPrecios();
             CargarCitas();
             ActualizarLabels();
         }
@@ -73,6 +75,15 @@ namespace Sistema_Medico
             contadorEspecialidades["Dermatología"] = 0;
             contadorEspecialidades["Ginecología"] = 0;
             contadorEspecialidades["Traumatología"] = 0;
+        }
+        private void InicializarPrecios()
+        {
+            preciosEspecialidades["Medicina General"] = 50;
+            preciosEspecialidades["Urología"] = 80;
+            preciosEspecialidades["Neurología"] = 70;
+            preciosEspecialidades["Dermatología"] = 100;
+            preciosEspecialidades["Ginecología"] = 80;
+            preciosEspecialidades["Traumatología"] = 120;
         }
         private void CargarCitas()
         {
@@ -127,7 +138,10 @@ namespace Sistema_Medico
                     contadorEspecialidades[especialidad]++;
                     GuardarCitas();
                     ActualizarLabels();
-                    MessageBox.Show($"Cita confirmada en {especialidad}.\nTotal pacientes: {contadorEspecialidades[especialidad]}", "Cita Confirmada");
+
+                    int precio = preciosEspecialidades[especialidad];
+                    Form5 formPago = new Form5(especialidad, precio);
+                    formPago.ShowDialog();
                 }
                 else
                 {
@@ -139,6 +153,7 @@ namespace Sistema_Medico
         private void button1_Click(object sender, EventArgs e)
         {
             ConfirmarCita("Medicina General");
+
         }
 
         private void button2_Click(object sender, EventArgs e)
